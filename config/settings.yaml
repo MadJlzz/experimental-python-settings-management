@@ -6,7 +6,7 @@ relational:
       area_id: core
     configuration:
       user: postgres
-      password: postgres
+      password: "@format {env[NGX_FILE_MANAGER_POSTGRES_PASSWORD]}"
       host: localhost
       port: 5432
       database: postgres
