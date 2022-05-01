@@ -2,10 +2,12 @@ relational:
   file-manager:
     kind: postgres
     labels:
-      isolation_group: bnp-euw3
-      area_id: core
+      isolation_group: some-kind-of-isolation-group
+      area_id: some-area-id
     configuration:
       user: postgres
+      # password will be loaded from an environment variable called NGX_FILE_MANAGER_POSTGRES_PASSWORD
+      # usually, you inject those at deployment time
       password: "@format {env[NGX_FILE_MANAGER_POSTGRES_PASSWORD]}"
       host: localhost
       port: 5432
