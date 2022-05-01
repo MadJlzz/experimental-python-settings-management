@@ -1,0 +1,11 @@
+relational:
+  file-manager:
+    kind: postgres
+    configuration:
+      host: devhost
+      pool_configuration:
+        pool_size: 2
+  prices:
+    kind: bigquery
+    configuration:
+      project_id: "bigquery-public-data-dev"

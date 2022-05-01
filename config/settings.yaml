@@ -1,0 +1,18 @@
+relational:
+  file-manager:
+    kind: postgres
+    labels:
+      isolation_group: bnp-euw3
+      area_id: core
+    configuration:
+      user: postgres
+      password: postgres
+      host: localhost
+      port: 5432
+      database: postgres
+  prices:
+    kind: bigquery
+    configuration:
+      project_id: "bigquery-public-data-local"
+      dataset_id: "nhtsa_traffic_fatalities"
+      table_id: "accident_2015"
