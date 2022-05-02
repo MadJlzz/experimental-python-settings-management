@@ -27,7 +27,7 @@ Dynamic variables in settings files.
 ```yaml
 postgresql:
   user: postgres
-  # password will be loaded from an environment variable called NGX_FILE_MANAGER_POSTGRES_PASSWORD
+  # password will be loaded from an environment variable called MYAPP_POSTGRES_PASSWORD
   # usually, you inject those at deployment time
   password: "@format {env[MYAPP_POSTGRES_PASSWORD]}"
   host: localhost
